@@ -28,6 +28,27 @@ We are injecting top-tier human strategy directly into your AI workflow.
   - Note: [notes/动量策略_笔记.md](notes/动量策略_笔记.md)
   - Skill: [skills/momentum-strategy/SKILL.md](skills/momentum-strategy/SKILL.md)
 
+### How to Add a New Book
+
+Mount the workflow skill and tell your AI which book to process:
+
+```
+@skills/book-to-skill/SKILL.md 帮我把[书名]的微信读书笔记转化成技能
+```
+
+The pipeline will: archive raw highlights -> synthesize structured notes -> extract an executable skill -> update this README. See [skills/book-to-skill/SKILL.md](skills/book-to-skill/SKILL.md) for the full SOP.
+
+### Project Structure
+
+```
+book-skills/
+  private/        # Raw highlights archive (gitignored, never committed)
+  notes/          # Structured reading notes (public)
+  skills/         # Executable AI Agent Skills (public)
+    book-to-skill/  # The pipeline skill itself
+  README.md       # This file (skill registry)
+```
+
 ## The Prize Frame
 This isn't just another markdown knowledge base. It's an executable extension of your brain. We are building this for action-takers who want to test these models in real-world combat. If you want to stop hoarding knowledge and start deploying it, welcome. 
 
@@ -60,6 +81,27 @@ We are not building a knowledge base, we are writing "drivers" for your external
   - 拒绝拍脑袋交易，用系统回测和风险量化构建可靠的量化策略。
   - 理论笔记: [notes/动量策略_笔记.md](notes/动量策略_笔记.md)
   - 可执行技能: [skills/momentum-strategy/SKILL.md](skills/momentum-strategy/SKILL.md)
+
+### 如何添加一本新书
+
+挂载工作流技能，告诉 AI 要处理哪本书：
+
+```
+@skills/book-to-skill/SKILL.md 帮我把[书名]的微信读书笔记转化成技能
+```
+
+完整流程：存档原始划线 -> 结构化重组笔记 -> 提取可执行技能 -> 更新本 README。详见 [skills/book-to-skill/SKILL.md](skills/book-to-skill/SKILL.md)。
+
+### 项目结构
+
+```
+book-skills/
+  private/        # 原始划线存档（已 gitignore，不会提交到公开仓库）
+  notes/          # 结构化读书笔记（公开）
+  skills/         # 可执行 AI Agent 技能（公开）
+    book-to-skill/  # 转化流程本身的 SOP
+  README.md       # 本文件（技能注册表）
+```
 
 ## 奖品框架
 这不适合只想沉浸在“我又读完了一本书”成就感中的人。我们在寻找真正理解“知行合一”，并打算把这些模型用到商业实战中去测试的行动派。
