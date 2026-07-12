@@ -23,6 +23,10 @@ We are injecting top-tier human strategy directly into your AI workflow.
   - Stop over-designing. Start evolving your product, tech, and team.
   - Note: [notes/奔跑吧程序员_笔记.md](notes/奔跑吧程序员_笔记.md)
   - Skill: [skills/running-programmer/SKILL.md](skills/running-programmer/SKILL.md)
+- **Momentum Strategy (Trading Evolved)**
+  - Stop guessing. Start building systematic, backtested trading models.
+  - Note: [notes/动量策略_笔记.md](notes/动量策略_笔记.md)
+  - Skill: [skills/momentum-strategy/SKILL.md](skills/momentum-strategy/SKILL.md)
 
 ## The Prize Frame
 This isn't just another markdown knowledge base. It's an executable extension of your brain. We are building this for action-takers who want to test these models in real-world combat. If you want to stop hoarding knowledge and start deploying it, welcome. 
@@ -52,6 +56,10 @@ We are not building a knowledge base, we are writing "drivers" for your external
   - 拒绝过度设计，让产品、技术和团队在进化中走向成功。
   - 理论笔记: [notes/奔跑吧程序员_笔记.md](notes/奔跑吧程序员_笔记.md)
   - 可执行技能: [skills/running-programmer/SKILL.md](skills/running-programmer/SKILL.md)
+- **《动量策略》(Trading Evolved)**
+  - 拒绝拍脑袋交易，用系统回测和风险量化构建可靠的量化策略。
+  - 理论笔记: [notes/动量策略_笔记.md](notes/动量策略_笔记.md)
+  - 可执行技能: [skills/momentum-strategy/SKILL.md](skills/momentum-strategy/SKILL.md)
 
 ## 奖品框架
 这不适合只想沉浸在“我又读完了一本书”成就感中的人。我们在寻找真正理解“知行合一”，并打算把这些模型用到商业实战中去测试的行动派。
