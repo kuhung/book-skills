@@ -14,7 +14,7 @@
   - Assists users in crafting high-impact pitches, presentations, and sales communications using the "STRONG" method and Frame Control. Use when users want to pitch an idea to investors, sell a product to a client, or need to overcome objections and command attention in business meetings.
 
 - **running-programmer** — `skills/running-programmer/SKILL.md`
-  - 运用《奔跑吧，程序员》的核心理念，指导产品、技术与团队的进化式增长。
+  - 运用《奔跑吧，程序员》(Hello Startup) 的进化式增长理念，指导创业期的产品、技术与团队决策。适用于用户想验证新产品想法、做技术选型或架构设计、担心过度设计、组建创业团队或招聘把关、制定产品迭代节奏时使用。
 
 ## 流水线技能（仅限本仓库内使用）
 
