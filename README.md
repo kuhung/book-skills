@@ -48,14 +48,14 @@ The pipeline will: archive raw highlights -> synthesize structured notes -> extr
 
 | Agent | Mount point | Mechanism |
 |-------|-------------|-----------|
-| Claude Code (global) | `~/.claude/skills/` | Symlinks: `git pull` here updates every project |
-| Claude Code (this repo) | `.claude/skills` | Symlink to `skills/`, includes the pipeline skill |
-| Cursor | `.cursor/rules/*.mdc` | Generated rules, auto-attached by description |
-| Codex / Gemini CLI | `AGENTS.md` / `GEMINI.md` | Generated skill index with routing instructions |
+| Codex / Cursor (global) | `~/.agents/skills/` | Symlinks to the cross-vendor standard dir; both read native SKILL.md |
+| Claude Code (global) | `~/.claude/skills/` | Symlinks (Cursor also reads this path for compatibility) |
+| All three (this repo) | `.claude/skills` | Symlink to `skills/`, includes the pipeline skill |
+| Gemini CLI | `AGENTS.md` / `GEMINI.md` | Generated skill index with routing instructions |
 
-Generated files are marked "do not edit by hand"—always edit `skills/` and re-run the script.
+Never copy skill folders by hand—copies drift. Generated index files are marked "do not edit by hand"; always edit `skills/` and re-run the script.
 
-The feedback loop rides the same symlinks: when a skill gets corrected in real-world use, tell your agent to append the lesson to that skill's "Field Notes" section—from any project. The edit lands directly in this repo's working tree; come back and commit it.
+The feedback loop rides the same symlinks: when a skill gets corrected in real-world use, tell your agent—Claude Code, Cursor, or Codex, from any project—to append the lesson to that skill's "Field Notes" section. The edit lands directly in this repo's working tree; come back and commit it.
 
 ### Project Structure
 
@@ -124,14 +124,14 @@ We are not building a knowledge base, we are writing "drivers" for your external
 
 | Agent | 挂载点 | 机制 |
 |-------|--------|------|
-| Claude Code（全局） | `~/.claude/skills/` | 软链接：本仓库 `git pull` 后所有项目自动同步 |
-| Claude Code（本仓库） | `.claude/skills` | 指向 `skills/` 的软链接，含流水线技能 |
-| Cursor | `.cursor/rules/*.mdc` | 生成的 rules，按 description 自动挂载 |
-| Codex / Gemini CLI | `AGENTS.md` / `GEMINI.md` | 生成的技能索引与路由指令 |
+| Codex / Cursor（全局） | `~/.agents/skills/` | 软链接到跨厂商标准目录，两者均原生读取 SKILL.md |
+| Claude Code（全局） | `~/.claude/skills/` | 软链接（Cursor 兼容读取此路径，双保险） |
+| 三家通用（本仓库） | `.claude/skills` | 指向 `skills/` 的软链接，含流水线技能 |
+| Gemini CLI | `AGENTS.md` / `GEMINI.md` | 生成的技能索引与路由指令 |
 
-所有生成文件均标注"勿手工编辑"——永远只改 `skills/`，然后重跑脚本。
+严禁向 Agent 技能目录手工拷贝文件夹——拷贝必漂移。生成的索引文件均标注"勿手工编辑"——永远只改 `skills/`，然后重跑脚本。
 
-反馈回路走的是同一条软链接：技能在实战中被修正时，在**任何项目**里让 Agent 把经验追加到该技能的 "Field Notes (实战修正)" 章节，改动会直接写回本仓库的工作区，回来提交即可。
+反馈回路走的是同一条软链接：技能在实战中被修正时，无论你在 Claude Code、Cursor 还是 Codex 里、身处哪个项目，让 Agent 把经验追加到该技能的 "Field Notes (实战修正)" 章节，改动会直接写回本仓库的工作区，回来提交即可。
 
 ### 项目结构
 

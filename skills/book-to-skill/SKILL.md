@@ -75,7 +75,7 @@ description: 将零散的读书笔记自动化处理为"私有存档 -> 结构�
   - 操作框架 (Operational Framework)：按场景分类的具体指令，指导 AI 在被调用时该如何运用书中的方法来辅助用户
   - 指令示例 (Instruction Examples)：3-4 个典型场景的示范对话，展示 AI 应如何回应
   - **正文控制在 100 行以内（渐进式披露）**：SKILL.md 只放"何时用 + 核心框架 + 指令"，详细论据与案例通过引用对应的 `notes/` 笔记路径实现按需加载，避免技能挤占上下文
-  - **末尾必含 "## Field Notes (实战修正)" 章节**：初始为占位说明。技能在实战中暴露的偏差（第二次残差）应回写至此，使技能随使用进化。**回写机制**：全局挂载 `~/.claude/skills/<技能名>` 是指向本仓库的软链接，因此在**任何项目**中编辑该路径下的 SKILL.md，改动都会直接落在本仓库的工作区——用户说"记入实战修正"时，Agent 以 `- YYYY-MM-DD: 经验内容` 格式追加到该章节即可，之后回本仓库提交。**严禁**将修正写入生成物（`.cursor/rules/`、`AGENTS.md`、`GEMINI.md`），它们会在下次运行 `install.sh` 时被覆盖
+  - **末尾必含 "## Field Notes (实战修正)" 章节**：初始为占位说明。技能在实战中暴露的偏差（第二次残差）应回写至此，使技能随使用进化。**回写机制**：全局挂载（`~/.agents/skills/<技能名>` 与 `~/.claude/skills/<技能名>`）都是指向本仓库的软链接，因此无论在 Claude Code、Cursor 还是 Codex 中、无论身处哪个项目，编辑挂载路径下的 SKILL.md，改动都会直接落在本仓库的工作区——用户说"记入实战修正"时，Agent 以 `- YYYY-MM-DD: 经验内容` 格式追加到该章节即可，之后回本仓库提交。**严禁**将修正写入生成物（`AGENTS.md`、`GEMINI.md`），它们会在下次运行 `install.sh` 时被覆盖
 
 ### Step 4: 仓库映射更新 (README Mapping) [必须在 Step 3 之后且在 Step 5 之前]
 
@@ -100,9 +100,9 @@ description: 将零散的读书笔记自动化处理为"私有存档 -> 结构�
 
 ### Step 5: 多 Agent 分发 (Distribution) [必须最后执行]
 
-- **动作**: 在仓库根目录运行 `./install.sh`，将新技能分发到所有 AI Agent 的挂载点（Claude Code 全局与项目级、Cursor rules、AGENTS.md/GEMINI.md 索引）。
+- **动作**: 在仓库根目录运行 `./install.sh`，将新技能软链接到各 AI Agent 的挂载点（`~/.agents/skills/` 供 Codex 与 Cursor 读取、`~/.claude/skills/` 供 Claude Code 读取、项目级 `.claude/skills`），并重新生成 AGENTS.md/GEMINI.md 索引。
 - **验证**: 确认脚本输出"全部产物自校验通过"，且新技能名出现在各步骤的 `[ok]` 列表中。若脚本以非零退出码结束，必须排查并修复后重跑，不得带故障收尾。
-- **原则**: `skills/` 是唯一事实源。禁止手工编辑 `.cursor/rules/`、`AGENTS.md`、`GEMINI.md`——它们由脚本生成，手工改动会在下次运行时被覆盖。
+- **原则**: `skills/` 是唯一事实源，分发一律用软链接，**严禁向任何 Agent 的技能目录手工拷贝文件**（拷贝必漂移）。禁止手工编辑 `AGENTS.md`、`GEMINI.md`——它们由脚本生成，手工改动会在下次运行时被覆盖。
 
 ## 执行铁律
 

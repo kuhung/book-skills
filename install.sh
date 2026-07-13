@@ -2,10 +2,12 @@
 # install.sh -- 分发层：把 skills/ 下的技能安装到各 AI Agent 的挂载点。
 #
 # 唯一事实源是 skills/*/SKILL.md。本脚本生成/链接的所有产物均可安全重跑（幂等）：
-#   1. ~/.claude/skills/<name>        Claude Code 全局（软链接，消费型技能）
-#   2. .claude/skills -> ../skills    Claude Code 项目级（含流水线技能）
-#   3. .cursor/rules/<name>.mdc       Cursor 项目级 rules（生成文件）
-#   4. AGENTS.md / GEMINI.md          Codex / Gemini CLI 技能索引（生成文件）
+#   1. ~/.agents/skills/<name>        跨厂商标准目录（软链接，Codex 与 Cursor 均读取）
+#      ~/.claude/skills/<name>        Claude Code 全局（软链接；Cursor 兼容读取）
+#   2. .claude/skills -> ../skills    项目级（含流水线技能，三家均可发现）
+#   3. AGENTS.md / GEMINI.md          Gemini CLI 等的技能索引（生成文件）
+#
+# Cursor 2.4+ 与 Codex 原生支持 SKILL.md 并跟随软链接，无需格式转换。
 #
 # 用法: ./install.sh
 
@@ -13,8 +15,7 @@ set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 SKILLS_DIR="$REPO_DIR/skills"
-CLAUDE_GLOBAL_DIR="$HOME/.claude/skills"
-CURSOR_RULES_DIR="$REPO_DIR/.cursor/rules"
+GLOBAL_DIRS="$HOME/.agents/skills $HOME/.claude/skills"
 
 # 流水线技能：依赖本仓库相对路径（private/、notes/），只做项目级安装，不进全局
 PIPELINE_SKILLS="book-to-skill"
@@ -39,34 +40,29 @@ frontmatter_field() {
   ' "$file"
 }
 
-# 输出 SKILL.md 去掉 frontmatter 之后的正文
-skill_body() {
-  awk 'NR==1 && $0=="---" { in_fm=1; next }
-       in_fm && $0=="---" { in_fm=0; body=1; next }
-       body' "$1"
-}
-
 errors=0
 fail() { echo "  [FAIL] $1"; errors=$((errors + 1)); }
 ok()   { echo "  [ok] $1"; }
 
-echo "== 1/4 Claude Code 全局安装 -> $CLAUDE_GLOBAL_DIR"
-mkdir -p "$CLAUDE_GLOBAL_DIR"
-for dir in "$SKILLS_DIR"/*/; do
-  name="$(basename "$dir")"
-  if is_pipeline_skill "$name"; then
-    echo "  [skip] $name（流水线技能，仅项目级）"
-    continue
-  fi
-  ln -sfn "${dir%/}" "$CLAUDE_GLOBAL_DIR/$name"
-  if [ -f "$CLAUDE_GLOBAL_DIR/$name/SKILL.md" ]; then
-    ok "$name"
-  else
-    fail "$name 软链接无效"
-  fi
+echo "== 1/3 全局安装（Claude Code / Codex / Cursor）"
+for global_dir in $GLOBAL_DIRS; do
+  echo "  -> $global_dir"
+  mkdir -p "$global_dir"
+  for dir in "$SKILLS_DIR"/*/; do
+    name="$(basename "$dir")"
+    if is_pipeline_skill "$name"; then
+      continue
+    fi
+    ln -sfn "${dir%/}" "$global_dir/$name"
+    if [ -f "$global_dir/$name/SKILL.md" ]; then
+      ok "$name"
+    else
+      fail "$name 软链接无效"
+    fi
+  done
 done
 
-echo "== 2/4 Claude Code 项目级安装 -> .claude/skills"
+echo "== 2/3 项目级安装 -> .claude/skills"
 mkdir -p "$REPO_DIR/.claude"
 ln -sfn "../skills" "$REPO_DIR/.claude/skills"
 if [ -f "$REPO_DIR/.claude/skills/book-to-skill/SKILL.md" ]; then
@@ -75,26 +71,7 @@ else
   fail ".claude/skills 软链接无效"
 fi
 
-echo "== 3/4 Cursor rules -> .cursor/rules/"
-mkdir -p "$CURSOR_RULES_DIR"
-for dir in "$SKILLS_DIR"/*/; do
-  name="$(basename "$dir")"
-  skill_md="$dir/SKILL.md"
-  desc="$(frontmatter_field "$skill_md" "description")"
-  mdc="$CURSOR_RULES_DIR/$name.mdc"
-  {
-    echo "---"
-    echo "description: $desc"
-    echo "alwaysApply: false"
-    echo "---"
-    echo
-    echo "<!-- 由 install.sh 生成，唯一事实源是 skills/$name/SKILL.md，勿手工编辑 -->"
-    skill_body "$skill_md"
-  } > "$mdc"
-  if [ -s "$mdc" ]; then ok "$name.mdc"; else fail "$name.mdc 生成失败"; fi
-done
-
-echo "== 4/4 技能索引 -> AGENTS.md / GEMINI.md"
+echo "== 3/3 技能索引 -> AGENTS.md / GEMINI.md"
 generate_index() {
   cat <<'HEADER'
 <!-- 由 install.sh 生成，唯一事实源是 skills/*/SKILL.md，勿手工编辑 -->
@@ -144,4 +121,4 @@ if [ "$errors" -gt 0 ]; then
   echo "安装未通过自校验：$errors 处失败"
   exit 1
 fi
-echo "全部产物自校验通过。技能已挂载到 Claude Code（全局+项目）、Cursor、Codex/Gemini（索引）。"
+echo "全部产物自校验通过。技能已软链接挂载到 Claude Code、Cursor、Codex（原生 SKILL.md），并生成 Gemini 索引。"
