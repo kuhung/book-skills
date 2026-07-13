@@ -2,7 +2,7 @@
 
 > Compile your **WeRead (微信读书)** highlights into executable **AI Agent Skills** (`SKILL.md`) — mount them once and run across **Claude Code, Cursor, Codex, and Gemini CLI**. A second brain that doesn't just store knowledge, it runs it.
 
-[中文版](#中文版-拒绝做数字仓鼠把你的读书笔记变成可执行的-ai-代码)
+[中文版](#中文版-拒绝做数字仓鼠把你的微信读书笔记变成可执行的-ai-代码)
 
 ## The Problem: "Digital Hamsters"
 You’ve read hundreds of books. Your **WeRead (微信读书)** library is full of highlights and margin notes. Yet, when you face a high-stakes negotiation or write a critical email, your mind goes blank. 
@@ -77,7 +77,7 @@ This isn't just another markdown knowledge base. It's an executable extension of
 
 ---
 
-# 中文版: 拒绝做数字仓鼠，把你的读书笔记变成可执行的 AI 代码
+# 中文版: 拒绝做数字仓鼠，把你的微信读书笔记变成可执行的 AI 代码
 
 > 把你的**微信读书**划线与想法，编译成可执行的 **AI Agent Skill**（`SKILL.md`）——一次挂载，即可在 **Claude Code、Cursor、Codex、Gemini CLI** 四家 AI 中运行。这是一个不只是存知识、而是让知识"跑起来"的第二大脑。
 
@@ -148,11 +148,6 @@ book-skills/
   AGENTS.md       # 生成的技能索引（跨 Agent 上下文文件）
   README.md       # 本文件（技能注册表）
 ```
-
-## 奖品框架
-这不适合只想沉浸在“我又读完了一本书”成就感中的人。我们在寻找真正理解“知行合一”，并打算把这些模型用到商业实战中去测试的行动派。
-
-如果你想让死知识变成活武器，带上你最喜欢的书，把它变成代码吧。
 
 ---
 
