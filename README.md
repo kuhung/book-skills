@@ -55,6 +55,8 @@ The pipeline will: archive raw highlights -> synthesize structured notes -> extr
 
 Generated files are marked "do not edit by hand"—always edit `skills/` and re-run the script.
 
+The feedback loop rides the same symlinks: when a skill gets corrected in real-world use, tell your agent to append the lesson to that skill's "Field Notes" section—from any project. The edit lands directly in this repo's working tree; come back and commit it.
+
 ### Project Structure
 
 ```
@@ -128,6 +130,8 @@ We are not building a knowledge base, we are writing "drivers" for your external
 | Codex / Gemini CLI | `AGENTS.md` / `GEMINI.md` | 生成的技能索引与路由指令 |
 
 所有生成文件均标注"勿手工编辑"——永远只改 `skills/`，然后重跑脚本。
+
+反馈回路走的是同一条软链接：技能在实战中被修正时，在**任何项目**里让 Agent 把经验追加到该技能的 "Field Notes (实战修正)" 章节，改动会直接写回本仓库的工作区，回来提交即可。
 
 ### 项目结构
 
