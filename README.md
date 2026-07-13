@@ -38,14 +38,34 @@ Mount the workflow skill and tell your AI which book to process:
 
 The pipeline will: archive raw highlights -> synthesize structured notes -> extract an executable skill -> update this README. See [skills/book-to-skill/SKILL.md](skills/book-to-skill/SKILL.md) for the full SOP.
 
+### Compile Once, Run Anywhere
+
+`skills/` is the single source of truth. One command mounts every skill onto all your AI agents:
+
+```bash
+./install.sh
+```
+
+| Agent | Mount point | Mechanism |
+|-------|-------------|-----------|
+| Claude Code (global) | `~/.claude/skills/` | Symlinks: `git pull` here updates every project |
+| Claude Code (this repo) | `.claude/skills` | Symlink to `skills/`, includes the pipeline skill |
+| Cursor | `.cursor/rules/*.mdc` | Generated rules, auto-attached by description |
+| Codex / Gemini CLI | `AGENTS.md` / `GEMINI.md` | Generated skill index with routing instructions |
+
+Generated files are marked "do not edit by hand"—always edit `skills/` and re-run the script.
+
 ### Project Structure
 
 ```
 book-skills/
   private/        # Raw highlights archive (gitignored, never committed)
   notes/          # Structured reading notes (public)
-  skills/         # Executable AI Agent Skills (public)
+  skills/         # Executable AI Agent Skills (public, single source of truth)
     book-to-skill/  # The pipeline skill itself
+  install.sh      # Distribution layer: mounts skills onto Claude Code / Cursor / Codex / Gemini
+  AGENTS.md       # Generated skill index for Codex-style agents
+  GEMINI.md       # Generated skill index for Gemini CLI
   README.md       # This file (skill registry)
 ```
 
@@ -92,14 +112,34 @@ We are not building a knowledge base, we are writing "drivers" for your external
 
 完整流程：存档原始划线 -> 结构化重组笔记 -> 提取可执行技能 -> 更新本 README。详见 [skills/book-to-skill/SKILL.md](skills/book-to-skill/SKILL.md)。
 
+### 一次编译，处处运行
+
+`skills/` 目录是唯一事实源。一条命令，把所有技能挂载到你的全部 AI Agent：
+
+```bash
+./install.sh
+```
+
+| Agent | 挂载点 | 机制 |
+|-------|--------|------|
+| Claude Code（全局） | `~/.claude/skills/` | 软链接：本仓库 `git pull` 后所有项目自动同步 |
+| Claude Code（本仓库） | `.claude/skills` | 指向 `skills/` 的软链接，含流水线技能 |
+| Cursor | `.cursor/rules/*.mdc` | 生成的 rules，按 description 自动挂载 |
+| Codex / Gemini CLI | `AGENTS.md` / `GEMINI.md` | 生成的技能索引与路由指令 |
+
+所有生成文件均标注"勿手工编辑"——永远只改 `skills/`，然后重跑脚本。
+
 ### 项目结构
 
 ```
 book-skills/
   private/        # 原始划线存档（已 gitignore，不会提交到公开仓库）
   notes/          # 结构化读书笔记（公开）
-  skills/         # 可执行 AI Agent 技能（公开）
+  skills/         # 可执行 AI Agent 技能（公开，唯一事实源）
     book-to-skill/  # 转化流程本身的 SOP
+  install.sh      # 分发层：把技能挂载到 Claude Code / Cursor / Codex / Gemini
+  AGENTS.md       # 生成的技能索引（Codex 类 Agent 使用）
+  GEMINI.md       # 生成的技能索引（Gemini CLI 使用）
   README.md       # 本文件（技能注册表）
 ```
 
