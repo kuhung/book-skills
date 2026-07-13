@@ -1,16 +1,18 @@
 # Book-Skills: Don't Just Read. Execute.
 
+> Compile your **WeRead (微信读书)** highlights into executable **AI Agent Skills** (`SKILL.md`) — mount them once and run across **Claude Code, Cursor, Codex, and Gemini CLI**. A second brain that doesn't just store knowledge, it runs it.
+
 [中文版](#中文版-拒绝做数字仓鼠把你的读书笔记变成可执行的-ai-代码)
 
 ## The Problem: "Digital Hamsters"
-You’ve read hundreds of books. You have endless Notion pages filled with highlights. Yet, when you face a high-stakes negotiation or write a critical email, your mind goes blank. 
+You’ve read hundreds of books. Your **WeRead (微信读书)** library is full of highlights and margin notes. Yet, when you face a high-stakes negotiation or write a critical email, your mind goes blank. 
 
 If your reading notes just sit in a database, they are dead. You are merely hoarding knowledge.
 
 ## The Solution: Books as Code
 What if books could be run, not just read?
 
-Book-Skills is the environment where we compile the world's best cognitive frameworks and methodologies into executable AI Agent Skills. When you face a challenge, you don't search your notes—you mount the skill.
+Book-Skills is the environment where we compile your **WeRead (微信读书)** highlights and personal notes into executable **AI Agent Skills** — a universal `SKILL.md` that runs across Claude Code, Cursor, Codex, and Gemini CLI. When you face a challenge, you don't search your notes—you mount the skill.
 
 We are injecting top-tier human strategy directly into your AI workflow.
 
@@ -77,15 +79,17 @@ This isn't just another markdown knowledge base. It's an executable extension of
 
 # 中文版: 拒绝做数字仓鼠，把你的读书笔记变成可执行的 AI 代码
 
+> 把你的**微信读书**划线与想法，编译成可执行的 **AI Agent Skill**（`SKILL.md`）——一次挂载，即可在 **Claude Code、Cursor、Codex、Gemini CLI** 四家 AI 中运行。这是一个不只是存知识、而是让知识"跑起来"的第二大脑。
+
 ## 痛点：知识仓鼠的困境
-你买了几百本书，建了无数个 Notion 页面，划线了无数金句。但在真正高压的会议上、在写关键邮件的那一秒，大脑依然一片空白。
+你买了几百本书，在**微信读书**里划了无数金句、写了无数想法。但在真正高压的会议上、在写关键邮件的那一秒，大脑依然一片空白。
 
 如果读书笔记不能在实战中被调用，那它就是死的，你只是在制造“我学到了”的虚假快感。
 
 ## 破局：让知识“运行”起来
 既然代码可以运行，为什么读书笔记不能被“运行”？
 
-Book-Skills 的理念是：把书本中的顶尖方法论，直接封装编译成 AI Agent 的 “Skill”（技能指令）。当你面临谈判或决策时，你不是去翻找笔记，而是直接挂载这个技能。AI 会立刻以这套认知框架来审查你的输出、指导你的对话。
+Book-Skills 的理念是：把你在**微信读书**里的划线与想法，直接封装编译成 AI Agent 的通用 “Skill”（`SKILL.md` 技能指令），一份技能通吃 Claude Code、Cursor、Codex、Gemini CLI。当你面临谈判或决策时，你不是去翻找笔记，而是直接挂载这个技能。AI 会立刻以这套认知框架来审查你的输出、指导你的对话。
 
 We are not building a knowledge base, we are writing "drivers" for your external brain.
 
@@ -149,3 +153,7 @@ book-skills/
 这不适合只想沉浸在“我又读完了一本书”成就感中的人。我们在寻找真正理解“知行合一”，并打算把这些模型用到商业实战中去测试的行动派。
 
 如果你想让死知识变成活武器，带上你最喜欢的书，把它变成代码吧。
+
+---
+
+**Keywords / 关键词**: 微信读书 (WeRead) · 微信读书笔记导出 · 读书笔记 · Agent Skills · SKILL.md · Claude Code · Cursor · Codex · Gemini CLI · 跨平台 AI 技能 · 知识管理 · 第二大脑 (Second Brain) · AI Agent · 划线与想法
