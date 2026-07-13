@@ -61,3 +61,11 @@ When reviewing a user's script, email, or presentation:
 - **Create "Hot Cognition":** Ensure the pitch evokes desire before logic. The audience must *want* it before they understand the math.
 - **Micro-defiance:** Encourage slight pushback or playful challenges to maintain high status.
 - **Avoid "The Subordinate Trap":** Do not let the user fall into a subservient role just because the other party has money or status.
+
+For deeper arguments and source material, see [notes/说服的艺术_笔记.md](../../notes/说服的艺术_笔记.md).
+
+## Field Notes (实战修正)
+
+本章节沉淀该方法论在实战中被修正的经验（第二次残差），随使用持续更新。
+
+使用方式：在任何项目中对 Agent 说"记入实战修正"，以 `- YYYY-MM-DD: 经验内容` 格式追加至此。全局挂载为软链接，此处的修改会直接写回 book-skills 仓库工作区，记得回仓库提交。
