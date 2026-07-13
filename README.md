@@ -48,12 +48,12 @@ The pipeline will: archive raw highlights -> synthesize structured notes -> extr
 
 | Agent | Mount point | Mechanism |
 |-------|-------------|-----------|
-| Codex / Cursor (global) | `~/.agents/skills/` | Symlinks to the cross-vendor standard dir; both read native SKILL.md |
+| Codex / Cursor / Gemini CLI (global) | `~/.agents/skills/` | Symlinks to the cross-vendor standard dir; all three read native SKILL.md |
 | Claude Code (global) | `~/.claude/skills/` | Symlinks (Cursor also reads this path for compatibility) |
-| All three (this repo) | `.claude/skills` | Symlink to `skills/`, includes the pipeline skill |
-| Gemini CLI | `AGENTS.md` / `GEMINI.md` | Generated skill index with routing instructions |
+| All four (this repo) | `.agents/skills`, `.claude/skills` | Symlinks to `skills/`, include the pipeline skill |
+| Any AGENTS.md reader | `AGENTS.md` | Generated skill index with routing instructions |
 
-Never copy skill folders by hand—copies drift. Generated index files are marked "do not edit by hand"; always edit `skills/` and re-run the script.
+Never copy skill folders by hand—copies drift. The generated index is marked "do not edit by hand"; always edit `skills/` and re-run the script.
 
 The feedback loop rides the same symlinks: when a skill gets corrected in real-world use, tell your agent—Claude Code, Cursor, or Codex, from any project—to append the lesson to that skill's "Field Notes" section. The edit lands directly in this repo's working tree; come back and commit it.
 
@@ -65,9 +65,8 @@ book-skills/
   notes/          # Structured reading notes (public)
   skills/         # Executable AI Agent Skills (public, single source of truth)
     book-to-skill/  # The pipeline skill itself
-  install.sh      # Distribution layer: mounts skills onto Claude Code / Cursor / Codex / Gemini
-  AGENTS.md       # Generated skill index for Codex-style agents
-  GEMINI.md       # Generated skill index for Gemini CLI
+  install.sh      # Distribution layer: symlinks skills onto Claude Code / Cursor / Codex / Gemini
+  AGENTS.md       # Generated skill index (cross-agent context file)
   README.md       # This file (skill registry)
 ```
 
@@ -124,12 +123,12 @@ We are not building a knowledge base, we are writing "drivers" for your external
 
 | Agent | 挂载点 | 机制 |
 |-------|--------|------|
-| Codex / Cursor（全局） | `~/.agents/skills/` | 软链接到跨厂商标准目录，两者均原生读取 SKILL.md |
+| Codex / Cursor / Gemini CLI（全局） | `~/.agents/skills/` | 软链接到跨厂商标准目录，三者均原生读取 SKILL.md |
 | Claude Code（全局） | `~/.claude/skills/` | 软链接（Cursor 兼容读取此路径，双保险） |
-| 三家通用（本仓库） | `.claude/skills` | 指向 `skills/` 的软链接，含流水线技能 |
-| Gemini CLI | `AGENTS.md` / `GEMINI.md` | 生成的技能索引与路由指令 |
+| 四家通用（本仓库） | `.agents/skills`、`.claude/skills` | 指向 `skills/` 的软链接，含流水线技能 |
+| 任何读 AGENTS.md 的工具 | `AGENTS.md` | 生成的技能索引与路由指令 |
 
-严禁向 Agent 技能目录手工拷贝文件夹——拷贝必漂移。生成的索引文件均标注"勿手工编辑"——永远只改 `skills/`，然后重跑脚本。
+严禁向 Agent 技能目录手工拷贝文件夹——拷贝必漂移。生成的索引文件标注"勿手工编辑"——永远只改 `skills/`，然后重跑脚本。
 
 反馈回路走的是同一条软链接：技能在实战中被修正时，无论你在 Claude Code、Cursor 还是 Codex 里、身处哪个项目，让 Agent 把经验追加到该技能的 "Field Notes (实战修正)" 章节，改动会直接写回本仓库的工作区，回来提交即可。
 
@@ -141,9 +140,8 @@ book-skills/
   notes/          # 结构化读书笔记（公开）
   skills/         # 可执行 AI Agent 技能（公开，唯一事实源）
     book-to-skill/  # 转化流程本身的 SOP
-  install.sh      # 分发层：把技能挂载到 Claude Code / Cursor / Codex / Gemini
-  AGENTS.md       # 生成的技能索引（Codex 类 Agent 使用）
-  GEMINI.md       # 生成的技能索引（Gemini CLI 使用）
+  install.sh      # 分发层：把技能软链接到 Claude Code / Cursor / Codex / Gemini
+  AGENTS.md       # 生成的技能索引（跨 Agent 上下文文件）
   README.md       # 本文件（技能注册表）
 ```
 

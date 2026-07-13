@@ -2,12 +2,13 @@
 # install.sh -- 分发层：把 skills/ 下的技能安装到各 AI Agent 的挂载点。
 #
 # 唯一事实源是 skills/*/SKILL.md。本脚本生成/链接的所有产物均可安全重跑（幂等）：
-#   1. ~/.agents/skills/<name>        跨厂商标准目录（软链接，Codex 与 Cursor 均读取）
+#   1. ~/.agents/skills/<name>        跨厂商标准目录（软链接，Codex/Cursor/Gemini 均读取）
 #      ~/.claude/skills/<name>        Claude Code 全局（软链接；Cursor 兼容读取）
-#   2. .claude/skills -> ../skills    项目级（含流水线技能，三家均可发现）
-#   3. AGENTS.md / GEMINI.md          Gemini CLI 等的技能索引（生成文件）
+#   2. .agents/skills -> ../skills    项目级标准路径（Codex/Cursor/Gemini，含流水线技能）
+#      .claude/skills -> ../skills    项目级（Claude Code）
+#   3. AGENTS.md                      跨 Agent 上下文索引（生成文件）
 #
-# Cursor 2.4+ 与 Codex 原生支持 SKILL.md 并跟随软链接，无需格式转换。
+# Cursor 2.4+、Codex、Gemini CLI 均原生支持 SKILL.md 并跟随软链接，无需格式转换。
 #
 # 用法: ./install.sh
 
@@ -44,7 +45,7 @@ errors=0
 fail() { echo "  [FAIL] $1"; errors=$((errors + 1)); }
 ok()   { echo "  [ok] $1"; }
 
-echo "== 1/3 全局安装（Claude Code / Codex / Cursor）"
+echo "== 1/3 全局安装（Claude Code / Codex / Cursor / Gemini）"
 for global_dir in $GLOBAL_DIRS; do
   echo "  -> $global_dir"
   mkdir -p "$global_dir"
@@ -62,16 +63,18 @@ for global_dir in $GLOBAL_DIRS; do
   done
 done
 
-echo "== 2/3 项目级安装 -> .claude/skills"
-mkdir -p "$REPO_DIR/.claude"
-ln -sfn "../skills" "$REPO_DIR/.claude/skills"
-if [ -f "$REPO_DIR/.claude/skills/book-to-skill/SKILL.md" ]; then
-  ok ".claude/skills -> ../skills"
-else
-  fail ".claude/skills 软链接无效"
-fi
+echo "== 2/3 项目级安装 -> .agents/skills 与 .claude/skills"
+for proj_dir in .agents .claude; do
+  mkdir -p "$REPO_DIR/$proj_dir"
+  ln -sfn "../skills" "$REPO_DIR/$proj_dir/skills"
+  if [ -f "$REPO_DIR/$proj_dir/skills/book-to-skill/SKILL.md" ]; then
+    ok "$proj_dir/skills -> ../skills"
+  else
+    fail "$proj_dir/skills 软链接无效"
+  fi
+done
 
-echo "== 3/3 技能索引 -> AGENTS.md / GEMINI.md"
+echo "== 3/3 技能索引 -> AGENTS.md"
 generate_index() {
   cat <<'HEADER'
 <!-- 由 install.sh 生成，唯一事实源是 skills/*/SKILL.md，勿手工编辑 -->
@@ -111,14 +114,11 @@ PIPELINE
 FOOTER
 }
 generate_index > "$REPO_DIR/AGENTS.md"
-cp "$REPO_DIR/AGENTS.md" "$REPO_DIR/GEMINI.md"
-for f in AGENTS.md GEMINI.md; do
-  if [ -s "$REPO_DIR/$f" ]; then ok "$f"; else fail "$f 生成失败"; fi
-done
+if [ -s "$REPO_DIR/AGENTS.md" ]; then ok "AGENTS.md"; else fail "AGENTS.md 生成失败"; fi
 
 echo
 if [ "$errors" -gt 0 ]; then
   echo "安装未通过自校验：$errors 处失败"
   exit 1
 fi
-echo "全部产物自校验通过。技能已软链接挂载到 Claude Code、Cursor、Codex（原生 SKILL.md），并生成 Gemini 索引。"
+echo "全部产物自校验通过。技能已软链接挂载到 Claude Code、Cursor、Codex、Gemini CLI（均为原生 SKILL.md）。"
