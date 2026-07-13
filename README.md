@@ -1,4 +1,4 @@
-# Book-Skills: Don't Just Read. Execute.
+# Weread-Book-Skills: Don't Just Read. Execute.
 
 > Compile your **WeRead (微信读书)** highlights into executable **AI Agent Skills** (`SKILL.md`) — mount them once and run across **Claude Code, Cursor, Codex, and Gemini CLI**. A second brain that doesn't just store knowledge, it runs it.
 
@@ -81,7 +81,7 @@ This isn't just another markdown knowledge base. It's an executable extension of
 
 > 把你的**微信读书**划线与想法，编译成可执行的 **AI Agent Skill**（`SKILL.md`）——一次挂载，即可在 **Claude Code、Cursor、Codex、Gemini CLI** 四家 AI 中运行。这是一个不只是存知识、而是让知识"跑起来"的第二大脑。
 
-## 痛点：知识仓鼠的困境
+## 痛点：笔记的困境
 你买了几百本书，在**微信读书**里划了无数金句、写了无数想法。但在真正高压的会议上、在写关键邮件的那一秒，大脑依然一片空白。
 
 如果读书笔记不能在实战中被调用，那它就是死的，你只是在制造“我学到了”的虚假快感。
