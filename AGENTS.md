@@ -46,8 +46,14 @@
 - **netflix-culture** — `skills/netflix-culture/SKILL.md`
   - 运用《奈飞文化手册》与《不拘一格》的自由与责任框架,指导高人才密度 x 绝对坦诚 x 移除管控的组织文化设计。适用于用户要诊断团队文化瓶颈、设计反馈机制或取消冗余审批、评估留任与招聘策略、以及从控制型管理转向情景管理时使用。
 
+- **options-strategy** — `skills/options-strategy/SKILL.md`
+  - 运用《麦克米伦谈期权》的核心方法论，指导期权策略设计与风险管理。适用于用户要设计期权交易策略（买方/卖方/价差/波动率交易）、评估期权组合的风险收益特性、用隐含波动率和认沽认购比做市场预测、以及管理期权头寸的资金和止盈止损时使用。
+
 - **persuasion-pitch** — `skills/persuasion-pitch/SKILL.md`
   - Assists users in crafting high-impact pitches, presentations, and sales communications using the "STRONG" method and Frame Control. Use when users want to pitch an idea to investors, sell a product to a client, or need to overcome objections and command attention in business meetings.
+
+- **portfolio-management** — `skills/portfolio-management/SKILL.md`
+  - 运用《投资组合再平衡》与《主动投资组合管理》的量化框架，指导资产配置、再平衡与主动管理决策。适用于用户要设计资产配置方案或确定再平衡策略、评估组合的风险因子暴露与信息率、判断主动管理是否创造Alpha还是只是承担了额外风险、以及进行组合绩效归因分析时使用。
 
 - **product-creation** — `skills/product-creation/SKILL.md`
   - 运用《创造》(Build, Tony Fadell) 的方法论,指导产品从 0 到 1 的关键决策与职业选择。适用于用户在评估新产品想法是否值得做、纠结数据驱动还是观点驱动决策、要把产品概念具象化(写新闻稿/画触点)、判断该加入哪家公司或何时辞职、以及从业务高手转型管理者遇到困惑时使用。
