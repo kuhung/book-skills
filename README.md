@@ -45,6 +45,10 @@ We are injecting top-tier human strategy directly into your AI workflow.
   - Stop trading advice for responsibility. Start asking questions that build awareness.
   - Note: [notes/高绩效教练_笔记.md](notes/高绩效教练_笔记.md)
   - Skill: [skills/coaching-grow/SKILL.md](skills/coaching-grow/SKILL.md)
+- **The Key Leap for New Managers (关键跨越·新手篇)**
+  - Stop being the team's best player. Start raising the whole team's game.
+  - Note: [notes/关键跨越新手篇_笔记.md](notes/关键跨越新手篇_笔记.md)
+  - Skill: [skills/first-time-manager/SKILL.md](skills/first-time-manager/SKILL.md)
 
 ### How to Add a New Book
 
@@ -138,6 +142,10 @@ We are not building a knowledge base, we are writing "drivers" for your external
   - 拒绝用建议交换责任，用 GROW 提问创建觉察与担当。
   - 理论笔记: [notes/高绩效教练_笔记.md](notes/高绩效教练_笔记.md)
   - 可执行技能: [skills/coaching-grow/SKILL.md](skills/coaching-grow/SKILL.md)
+- **《关键跨越（新手篇）》(The Key Leap)**
+  - 拒绝继续做团队里最强的个人，转型为提升团队整体效能的主管。
+  - 理论笔记: [notes/关键跨越新手篇_笔记.md](notes/关键跨越新手篇_笔记.md)
+  - 可执行技能: [skills/first-time-manager/SKILL.md](skills/first-time-manager/SKILL.md)
 
 ### 如何添加一本新书
 
