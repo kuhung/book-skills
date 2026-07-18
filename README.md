@@ -33,6 +33,10 @@ We are injecting top-tier human strategy directly into your AI workflow.
   - Stop polishing ideas in your head. Start making the intangible tangible.
   - Note: [notes/创造_笔记.md](notes/创造_笔记.md)
   - Skill: [skills/product-creation/SKILL.md](skills/product-creation/SKILL.md)
+- **Agentic Design Patterns (Antonio Gulli)**
+  - Stop asking if agents can. Start asking what each pattern costs.
+  - Note: [notes/智能体设计模式_笔记.md](notes/智能体设计模式_笔记.md)
+  - Skill: [skills/agent-design-patterns/SKILL.md](skills/agent-design-patterns/SKILL.md)
 
 ### How to Add a New Book
 
@@ -114,6 +118,10 @@ We are not building a knowledge base, we are writing "drivers" for your external
   - 拒绝停留在脑海里打磨想法，用新闻稿和触点图把无形变有形。
   - 理论笔记: [notes/创造_笔记.md](notes/创造_笔记.md)
   - 可执行技能: [skills/product-creation/SKILL.md](skills/product-creation/SKILL.md)
+- **《智能体设计模式》(Agentic Design Patterns)**
+  - 拒绝为用 Agent 而用 Agent，先看每个模式的代价再选型。
+  - 理论笔记: [notes/智能体设计模式_笔记.md](notes/智能体设计模式_笔记.md)
+  - 可执行技能: [skills/agent-design-patterns/SKILL.md](skills/agent-design-patterns/SKILL.md)
 
 ### 如何添加一本新书
 

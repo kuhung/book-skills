@@ -7,6 +7,9 @@
 
 ## 消费型技能（书籍方法论）
 
+- **agent-design-patterns** — `skills/agent-design-patterns/SKILL.md`
+  - 运用《智能体设计模式》(Antonio Gulli) 的 21 个模式,指导 AI Agent 系统的架构设计与选型。适用于用户在设计 Agent 工作流(选择链式/路由/并行/多Agent编排)、提升 Agent 输出质量与可靠性(反思/异常处理/Guardrails)、做 RAG 技术选型(混合检索/GraphRAG/Agentic RAG)、优化 Agent 成本与延迟(动态模型切换/回退)时使用。
+
 - **momentum-strategy** — `skills/momentum-strategy/SKILL.md`
   - 运用《动量策略》的核心方法论，指导量化交易模型的设计、回测和风险控制。适用于用户想要构建系统交易策略、评估回测结果、或进行投资组合配置时使用。
 
