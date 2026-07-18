@@ -17,8 +17,13 @@ description: 将零散的读书笔记自动化处理为"私有存档 -> 结构�
 
 用户的读书数据来源于**微信读书**。使用 `weread-skills` MCP 提供的 API 接口获取数据。
 
+**环境前置**：`WEREAD_API_KEY` 必须持久化写入 `~/.zshenv`（而非仅在当前 session export），确保每次新终端/新 Agent 会话自动可用。若检测到未设置，提示用户执行：
+```bash
+echo 'export WEREAD_API_KEY="wrk-xxxxxxxx"' >> ~/.zshenv && source ~/.zshenv
+```
+
 **获取流程**：
-1. 确保环境变量 `WEREAD_API_KEY` 已设置（格式 `wrk-xxxxxxxx`）。若未设置，提示用户。
+1. 确认 `$WEREAD_API_KEY` 在当前 shell 中有值。若为空，按上方指引设置后再继续。
 2. 调用 `/store/search` 或 `/user/notebooks` 定位目标书籍，获取 `bookId`。
 3. 并行调用以下接口获取完整数据：
    - `/book/info` -- 书籍基本信息（书名、作者、译者、简介、出版社、评分）

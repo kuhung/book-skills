@@ -13,11 +13,26 @@
 - **behavior-design** — `skills/behavior-design/SKILL.md`
   - 融合《掌控习惯》(James Clear) 四大定律与《福格行为模型》(B.J. Fogg) B=MAP 的行为设计技能。适用于用户要养成新习惯或戒除坏习惯、诊断"计划总是坚持不下去"的问题、为产品或团队设计行为改变机制、以及把大目标拆解为可持续微行动时使用。
 
+- **brain-efficiency** — `skills/brain-efficiency/SKILL.md`
+  - 运用《效率脑科学》的舞台模型、情绪调节、SCARF 社交需求与洞察驱动改变框架,优化个人与团队的工作效率。适用于用户感到多任务过载或决策疲劳、需要设计低威胁反馈/协作对话、团队冲突或士气问题需从神经科学角度诊断、以及推动他人改变但直接给建议无效时使用。
+
 - **coaching-grow** — `skills/coaching-grow/SKILL.md`
   - 运用《高绩效教练》(John Whitmore) 的 GROW 模型与教练式提问,帮助用户通过觉察与责任感释放他人潜能。适用于用户要准备 1:1 对话或辅导下属、想戒掉"直接给答案"改用提问启发、做绩效反馈或项目复盘、以及对自己的目标困境做自我教练时使用。
 
+- **crucial-accountability** — `skills/crucial-accountability/SKILL.md`
+  - 运用《关键冲突》(Crucial Conversations 系列) 的 CPR 思维法与安全问责框架,指导用户当他人违反承诺时开展有效面对。适用于用户要谈下属拖延/同事甩锅/老板反悔承诺、反复遇到同一问题却谈不拢、准备高难度问责对话脚本、以及设计承诺跟进机制时使用。
+
+- **deep-work** — `skills/deep-work/SKILL.md`
+  - 运用《深度工作》(Cal Newport) 的四准则框架,指导用户设计注意力管理与深度工作系统。适用于用户想提升专注产出、日程被浮浅事务淹没、设计个人深度工作习惯(哲学选型/时间块/固定日程)、评估是否该戒断某网络工具、以及诊断"忙一天却没什么成果"时使用。
+
+- **devops-three-ways** — `skills/devops-three-ways/SKILL.md`
+  - 运用《凤凰项目》DevOps 三步工作法与《独角兽项目》五大理念，诊断技术价值流瓶颈并设计流动、反馈与持续学习机制。适用于用户要优化部署流水线或降低变更失败率、诊断 WIP 过载与约束点、建立 blameless 复盘与心理安全文化、以及评估技术债务与架构局部性时使用。
+
 - **first-time-manager** — `skills/first-time-manager/SKILL.md`
   - 运用《关键跨越(新手篇)》的三大跨越框架(承担管理责任/推动执行/辅导他人),指导从业务高手到主管的转型。适用于用户刚晋升主管或即将带团队、纠结任务该自己做还是交给下属、要做向上汇报或与上级对焦优先级、以及辅导下属没起色想评估是否继续投入时使用。
+
+- **good-to-great** — `skills/good-to-great/SKILL.md`
+  - 运用《从优秀到卓越》(Jim Collins) 的飞轮模型、刺猬理念与第5级领导力，诊断组织从优秀到卓越的跃迁路径。适用于用户要评估领导层是否具备第5级特质、制定战略取舍与"停止做"清单、用三环交叉检验业务聚焦、设计飞轮积累机制、以及判断技术/并购是否符合刺猬理念时使用。
 
 - **growth-hacking** — `skills/growth-hacking/SKILL.md`
   - 运用《硅谷增长黑客实战笔记》(曲卉) 的北极星指标、增长模型与实验流程设计数据驱动的增长体系。适用于用户要定义产品核心指标或搭建增长模型、设计增长实验或 A/B 测试、诊断新用户激活与留存问题、以及组建增长团队或建立实验文化时使用。
@@ -27,6 +42,9 @@
 
 - **momentum-strategy** — `skills/momentum-strategy/SKILL.md`
   - 运用《动量策略》的核心方法论，指导量化交易模型的设计、回测和风险控制。适用于用户想要构建系统交易策略、评估回测结果、或进行投资组合配置时使用。
+
+- **netflix-culture** — `skills/netflix-culture/SKILL.md`
+  - 运用《奈飞文化手册》与《不拘一格》的自由与责任框架,指导高人才密度 x 绝对坦诚 x 移除管控的组织文化设计。适用于用户要诊断团队文化瓶颈、设计反馈机制或取消冗余审批、评估留任与招聘策略、以及从控制型管理转向情景管理时使用。
 
 - **persuasion-pitch** — `skills/persuasion-pitch/SKILL.md`
   - Assists users in crafting high-impact pitches, presentations, and sales communications using the "STRONG" method and Frame Control. Use when users want to pitch an idea to investors, sell a product to a client, or need to overcome objections and command attention in business meetings.
