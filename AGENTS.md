@@ -10,11 +10,20 @@
 - **agent-design-patterns** — `skills/agent-design-patterns/SKILL.md`
   - 运用《智能体设计模式》(Antonio Gulli) 的 21 个模式,指导 AI Agent 系统的架构设计与选型。适用于用户在设计 Agent 工作流(选择链式/路由/并行/多Agent编排)、提升 Agent 输出质量与可靠性(反思/异常处理/Guardrails)、做 RAG 技术选型(混合检索/GraphRAG/Agentic RAG)、优化 Agent 成本与延迟(动态模型切换/回退)时使用。
 
+- **behavior-design** — `skills/behavior-design/SKILL.md`
+  - 融合《掌控习惯》(James Clear) 四大定律与《福格行为模型》(B.J. Fogg) B=MAP 的行为设计技能。适用于用户要养成新习惯或戒除坏习惯、诊断"计划总是坚持不下去"的问题、为产品或团队设计行为改变机制、以及把大目标拆解为可持续微行动时使用。
+
 - **coaching-grow** — `skills/coaching-grow/SKILL.md`
   - 运用《高绩效教练》(John Whitmore) 的 GROW 模型与教练式提问,帮助用户通过觉察与责任感释放他人潜能。适用于用户要准备 1:1 对话或辅导下属、想戒掉"直接给答案"改用提问启发、做绩效反馈或项目复盘、以及对自己的目标困境做自我教练时使用。
 
 - **first-time-manager** — `skills/first-time-manager/SKILL.md`
   - 运用《关键跨越(新手篇)》的三大跨越框架(承担管理责任/推动执行/辅导他人),指导从业务高手到主管的转型。适用于用户刚晋升主管或即将带团队、纠结任务该自己做还是交给下属、要做向上汇报或与上级对焦优先级、以及辅导下属没起色想评估是否继续投入时使用。
+
+- **growth-hacking** — `skills/growth-hacking/SKILL.md`
+  - 运用《硅谷增长黑客实战笔记》(曲卉) 的北极星指标、增长模型与实验流程设计数据驱动的增长体系。适用于用户要定义产品核心指标或搭建增长模型、设计增长实验或 A/B 测试、诊断新用户激活与留存问题、以及组建增长团队或建立实验文化时使用。
+
+- **incentive-design** — `skills/incentive-design/SKILL.md`
+  - 运用《混合信号》(Uri Gneezy) 的信号理论与行为经济学杠杆设计激励机制。适用于用户要设计团队绩效考核或奖金方案、诊断"说一套激励一套"的制度失灵（如喊创新却罚失败）、设计用户增长或习惯养成的奖励机制、以及在定价谈判中运用信号策略时使用。
 
 - **momentum-strategy** — `skills/momentum-strategy/SKILL.md`
   - 运用《动量策略》的核心方法论，指导量化交易模型的设计、回测和风险控制。适用于用户想要构建系统交易策略、评估回测结果、或进行投资组合配置时使用。
@@ -30,6 +39,18 @@
 
 - **solo-operator** — `skills/solo-operator/SKILL.md`
   - 运用《单干》(陈欢) 的 49 个关键动作方法论,指导一人公司与超级个体的商业决策。适用于用户想把专业能力变现(定价/产品化/知识付费)、设计个人品牌定位与内容策略、评估要不要辞职单干或开启副业、以及单干路上纠结方向选择(先做产品还是先做流量)时使用。
+
+- **spin-selling** — `skills/spin-selling/SKILL.md`
+  - 运用《销售巨人》(Neil Rackham) 的 SPIN 提问序列与晋级承诺方法推进大订单/B2B 复杂销售。适用于用户要准备大客户拜访或售前会谈、设计销售提问话术、诊断"聊得很好但单子不动"的僵局、以及规划多轮销售的阶段目标时使用。与 persuasion-pitch（框架控制与融资路演）互补：pitch 管气场与叙事，SPIN 管提问与需求挖掘。
+
+- **strategy-safari** — `skills/strategy-safari/SKILL.md`
+  - 运用《战略历程》(Mintzberg) 的十大战略学派作为分析透镜审视战略问题。适用于用户要制定或评审公司/业务/个人战略、诊断战略规划为何沦为形式、拆解咨询报告或管理话术的理论出身与盲区、以及在深思熟虑与随机应变之间找平衡时使用。
+
+- **talent-assessment** — `skills/talent-assessment/SKILL.md`
+  - 运用《大厂人才》(娄珺) 的祛魅框架与人才盘点方法评估组织的人才管理实践。适用于用户要做团队人才盘点或梯队规划、评估是否引入 OKR/价值观考核/去 KPI 等大厂工具、设计干部选拔与晋升标准、以及诊断考核制度为何流于形式时使用。
+
+- **team-topologies** — `skills/team-topologies/SKILL.md`
+  - 运用《高效能团队模式》(Team Topologies) 的逆康威定律、四类团队与认知负荷方法设计工程组织。适用于用户要做团队拆分或组织架构调整、诊断"团队疲于奔命/交付变慢"的认知超载问题、规划平台团队或中台边界、以及评估系统架构与团队结构是否匹配时使用。
 
 ## 流水线技能（仅限本仓库内使用）
 
