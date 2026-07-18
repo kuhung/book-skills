@@ -15,7 +15,7 @@ description: 将零散的读书笔记自动化处理为"私有存档 -> 结构�
 
 ## 数据获取 (Data Acquisition)
 
-用户的读书数据来源于**微信读书**。使用 `weread-skills` 提供的 API 接口获取数据。
+用户的读书数据来源于**微信读书**。使用 `weread-skills` MCP 提供的 API 接口获取数据。
 
 **获取流程**：
 1. 确保环境变量 `WEREAD_API_KEY` 已设置（格式 `wrk-xxxxxxxx`）。若未设置，提示用户。
