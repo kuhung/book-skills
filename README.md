@@ -29,6 +29,10 @@ We are injecting top-tier human strategy directly into your AI workflow.
   - Stop guessing. Start building systematic, backtested trading models.
   - Note: [notes/动量策略_笔记.md](notes/动量策略_笔记.md)
   - Skill: [skills/momentum-strategy/SKILL.md](skills/momentum-strategy/SKILL.md)
+- **Build (Tony Fadell)**
+  - Stop polishing ideas in your head. Start making the intangible tangible.
+  - Note: [notes/创造_笔记.md](notes/创造_笔记.md)
+  - Skill: [skills/product-creation/SKILL.md](skills/product-creation/SKILL.md)
 
 ### How to Add a New Book
 
@@ -106,6 +110,10 @@ We are not building a knowledge base, we are writing "drivers" for your external
   - 拒绝拍脑袋交易，用系统回测和风险量化构建可靠的量化策略。
   - 理论笔记: [notes/动量策略_笔记.md](notes/动量策略_笔记.md)
   - 可执行技能: [skills/momentum-strategy/SKILL.md](skills/momentum-strategy/SKILL.md)
+- **《创造》(Build)**
+  - 拒绝停留在脑海里打磨想法，用新闻稿和触点图把无形变有形。
+  - 理论笔记: [notes/创造_笔记.md](notes/创造_笔记.md)
+  - 可执行技能: [skills/product-creation/SKILL.md](skills/product-creation/SKILL.md)
 
 ### 如何添加一本新书
 

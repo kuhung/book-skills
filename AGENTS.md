@@ -13,6 +13,9 @@
 - **persuasion-pitch** — `skills/persuasion-pitch/SKILL.md`
   - Assists users in crafting high-impact pitches, presentations, and sales communications using the "STRONG" method and Frame Control. Use when users want to pitch an idea to investors, sell a product to a client, or need to overcome objections and command attention in business meetings.
 
+- **product-creation** — `skills/product-creation/SKILL.md`
+  - 运用《创造》(Build, Tony Fadell) 的方法论,指导产品从 0 到 1 的关键决策与职业选择。适用于用户在评估新产品想法是否值得做、纠结数据驱动还是观点驱动决策、要把产品概念具象化(写新闻稿/画触点)、判断该加入哪家公司或何时辞职、以及从业务高手转型管理者遇到困惑时使用。
+
 - **running-programmer** — `skills/running-programmer/SKILL.md`
   - 运用《奔跑吧，程序员》(Hello Startup) 的进化式增长理念，指导创业期的产品、技术与团队决策。适用于用户想验证新产品想法、做技术选型或架构设计、担心过度设计、组建创业团队或招聘把关、制定产品迭代节奏时使用。
 
