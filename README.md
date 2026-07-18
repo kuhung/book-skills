@@ -82,7 +82,7 @@ cd book-skills
 ./install.sh
 ```
 
-完成。15 个技能已软链接挂载到你的 Claude Code / Cursor / Codex / Gemini CLI。
+完成。26 个技能已软链接挂载到你的 Claude Code / Cursor / Codex / Gemini CLI。
 
 **添加新书**——挂载流水线技能，告诉 AI 要处理哪本：
 
@@ -143,7 +143,7 @@ flowchart LR
 4. **分发**：`./install.sh`
 5. **日常使用**：正常对话，匹配时自动触发
 
-格式模板在 `templates/`，现有的 16 个 notes 和 15 个 skills 是实际参照。从你最常用的一本书开始。
+格式模板在 `templates/`，现有的 27 个 notes 和 26 个 skills 是实际参照。从你最常用的一本书开始。
 
 ---
 
