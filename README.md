@@ -37,6 +37,10 @@ We are injecting top-tier human strategy directly into your AI workflow.
   - Stop asking if agents can. Start asking what each pattern costs.
   - Note: [notes/智能体设计模式_笔记.md](notes/智能体设计模式_笔记.md)
   - Skill: [skills/agent-design-patterns/SKILL.md](skills/agent-design-patterns/SKILL.md)
+- **Solo (单干)**
+  - Stop selling knowledge. Start selling outcomes with leverage.
+  - Note: [notes/单干_笔记.md](notes/单干_笔记.md)
+  - Skill: [skills/solo-operator/SKILL.md](skills/solo-operator/SKILL.md)
 
 ### How to Add a New Book
 
@@ -122,6 +126,10 @@ We are not building a knowledge base, we are writing "drivers" for your external
   - 拒绝为用 Agent 而用 Agent，先看每个模式的代价再选型。
   - 理论笔记: [notes/智能体设计模式_笔记.md](notes/智能体设计模式_笔记.md)
   - 可执行技能: [skills/agent-design-patterns/SKILL.md](skills/agent-design-patterns/SKILL.md)
+- **《单干》(Solo)**
+  - 拒绝直接出售知识，用杠杆撬动稀缺、瞄准效果定价。
+  - 理论笔记: [notes/单干_笔记.md](notes/单干_笔记.md)
+  - 可执行技能: [skills/solo-operator/SKILL.md](skills/solo-operator/SKILL.md)
 
 ### 如何添加一本新书
 

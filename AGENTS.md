@@ -22,6 +22,9 @@
 - **running-programmer** — `skills/running-programmer/SKILL.md`
   - 运用《奔跑吧，程序员》(Hello Startup) 的进化式增长理念，指导创业期的产品、技术与团队决策。适用于用户想验证新产品想法、做技术选型或架构设计、担心过度设计、组建创业团队或招聘把关、制定产品迭代节奏时使用。
 
+- **solo-operator** — `skills/solo-operator/SKILL.md`
+  - 运用《单干》(陈欢) 的 49 个关键动作方法论,指导一人公司与超级个体的商业决策。适用于用户想把专业能力变现(定价/产品化/知识付费)、设计个人品牌定位与内容策略、评估要不要辞职单干或开启副业、以及单干路上纠结方向选择(先做产品还是先做流量)时使用。
+
 ## 流水线技能（仅限本仓库内使用）
 
 - **book-to-skill** — `skills/book-to-skill/SKILL.md`
