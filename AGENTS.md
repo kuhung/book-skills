@@ -10,6 +10,9 @@
 - **agent-design-patterns** — `skills/agent-design-patterns/SKILL.md`
   - 运用《智能体设计模式》(Antonio Gulli) 的 21 个模式,指导 AI Agent 系统的架构设计与选型。适用于用户在设计 Agent 工作流(选择链式/路由/并行/多Agent编排)、提升 Agent 输出质量与可靠性(反思/异常处理/Guardrails)、做 RAG 技术选型(混合检索/GraphRAG/Agentic RAG)、优化 Agent 成本与延迟(动态模型切换/回退)时使用。
 
+- **coaching-grow** — `skills/coaching-grow/SKILL.md`
+  - 运用《高绩效教练》(John Whitmore) 的 GROW 模型与教练式提问,帮助用户通过觉察与责任感释放他人潜能。适用于用户要准备 1:1 对话或辅导下属、想戒掉"直接给答案"改用提问启发、做绩效反馈或项目复盘、以及对自己的目标困境做自我教练时使用。
+
 - **momentum-strategy** — `skills/momentum-strategy/SKILL.md`
   - 运用《动量策略》的核心方法论，指导量化交易模型的设计、回测和风险控制。适用于用户想要构建系统交易策略、评估回测结果、或进行投资组合配置时使用。
 

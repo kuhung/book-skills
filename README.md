@@ -41,6 +41,10 @@ We are injecting top-tier human strategy directly into your AI workflow.
   - Stop selling knowledge. Start selling outcomes with leverage.
   - Note: [notes/单干_笔记.md](notes/单干_笔记.md)
   - Skill: [skills/solo-operator/SKILL.md](skills/solo-operator/SKILL.md)
+- **Coaching for Performance (高绩效教练)**
+  - Stop trading advice for responsibility. Start asking questions that build awareness.
+  - Note: [notes/高绩效教练_笔记.md](notes/高绩效教练_笔记.md)
+  - Skill: [skills/coaching-grow/SKILL.md](skills/coaching-grow/SKILL.md)
 
 ### How to Add a New Book
 
@@ -130,6 +134,10 @@ We are not building a knowledge base, we are writing "drivers" for your external
   - 拒绝直接出售知识，用杠杆撬动稀缺、瞄准效果定价。
   - 理论笔记: [notes/单干_笔记.md](notes/单干_笔记.md)
   - 可执行技能: [skills/solo-operator/SKILL.md](skills/solo-operator/SKILL.md)
+- **《高绩效教练》(Coaching for Performance)**
+  - 拒绝用建议交换责任，用 GROW 提问创建觉察与担当。
+  - 理论笔记: [notes/高绩效教练_笔记.md](notes/高绩效教练_笔记.md)
+  - 可执行技能: [skills/coaching-grow/SKILL.md](skills/coaching-grow/SKILL.md)
 
 ### 如何添加一本新书
 
