@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">运行时自动触发与渐进式披露</title>
+  <desc id="desc">用户正常对话，Agent 用 description 路由键匹配触发场景，按需分层加载 SKILL.md 正文与 notes 论据。</desc>
+  <defs>
+    <marker id="ar6" markerWidth="10" markerHeight="10" refX="6.5" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="878" height="428" rx="18" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="40" y="46" font-size="22" font-weight="700" fill="#1f2933">使用方法 · 你只管正常对话，技能自动上场</text>
+  <text x="40" y="72" font-size="14" fill="#6b7280">无需手动 @ 某本书——匹配即加载，按需分层，绝不挤占上下文</text>
+
+  <!-- flow row -->
+  <!-- 1 user -->
+  <rect x="40" y="102" width="180" height="96" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="60" y="130" font-size="14" font-weight="700" fill="#1f2933">① 你开口</text>
+  <text x="60" y="156" font-size="12.5" fill="#6b7280">在任意 Agent 里正常提问</text>
+  <rect x="60" y="168" width="140" height="20" rx="6" fill="#eef2ff"/>
+  <text x="130" y="182" text-anchor="middle" font-size="11" fill="#4f46e5">「帮我准备和下属的 1:1」</text>
+
+  <line x1="222" y1="150" x2="248" y2="150" stroke="#9ca3af" stroke-width="2" marker-end="url(#ar6)"/>
+
+  <!-- 2 routing -->
+  <rect x="252" y="102" width="180" height="96" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="272" y="130" font-size="14" font-weight="700" fill="#1f2933">② 路由匹配</text>
+  <text x="272" y="156" font-size="12.5" fill="#6b7280">Agent 扫描各技能的</text>
+  <text x="272" y="176" font-size="12.5" fill="#6b7280">description 触发场景</text>
+
+  <line x1="434" y1="150" x2="460" y2="150" stroke="#9ca3af" stroke-width="2" marker-end="url(#ar6)"/>
+
+  <!-- 3 load -->
+  <rect x="464" y="102" width="180" height="96" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="484" y="130" font-size="14" font-weight="700" fill="#1f2933">③ 命中加载</text>
+  <text x="484" y="156" font-size="12.5" fill="#6b7280">载入 coaching-grow</text>
+  <text x="484" y="176" font-size="12.5" fill="#6b7280">的角色设定与框架</text>
+
+  <line x1="646" y1="150" x2="672" y2="150" stroke="#9ca3af" stroke-width="2" marker-end="url(#ar6)"/>
+
+  <!-- 4 respond -->
+  <rect x="676" y="102" width="164" height="96" rx="14" fill="#0d9488"/>
+  <text x="696" y="130" font-size="14" font-weight="700" fill="#ffffff">④ 专业回应</text>
+  <text x="696" y="156" font-size="12.5" fill="#d1fae5">用《高绩效教练》的</text>
+  <text x="696" y="176" font-size="12.5" fill="#d1fae5">GROW 模型给对话脚本</text>
+
+  <!-- progressive disclosure ladder -->
+  <text x="40" y="248" font-size="15" font-weight="700" fill="#1f2933">渐进式披露 · 只在需要时加载，token 花在刀刃上</text>
+
+  <rect x="40" y="266" width="800" height="42" rx="10" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="60" y="286" font-size="13" font-weight="700" fill="#4f46e5">L0　description（路由键）</text>
+  <text x="60" y="302" font-size="11.5" fill="#6b7280">常驻 · 约一行 · 决定「何时触发」</text>
+  <text x="820" y="291" text-anchor="end" font-size="12" fill="#4f46e5">始终在场</text>
+
+  <rect x="40" y="314" width="800" height="42" rx="10" fill="#ccfbf1" stroke="#5eead4"/>
+  <text x="60" y="334" font-size="13" font-weight="700" fill="#0d9488">L1　SKILL.md 正文</text>
+  <text x="60" y="350" font-size="11.5" fill="#6b7280">触发时加载 · 100 行内 · 核心框架 + 指令</text>
+  <text x="820" y="339" text-anchor="end" font-size="12" fill="#0d9488">命中才加载</text>
+
+  <rect x="40" y="362" width="800" height="42" rx="10" fill="#fef3c7" stroke="#fcd34d"/>
+  <text x="60" y="382" font-size="13" font-weight="700" fill="#b45309">L2　notes/ 深层论据</text>
+  <text x="60" y="398" font-size="11.5" fill="#6b7280">需要更深论据时才读 · 完整笔记与案例</text>
+  <text x="820" y="387" text-anchor="end" font-size="12" fill="#b45309">按需加载</text>
+</svg>

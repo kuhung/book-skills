@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">一次编译，处处运行</title>
+  <desc id="desc">skills 目录是唯一事实源，install.sh 用软链接分发到四家 Agent，实战修正经软链接直接回写事实源。</desc>
+  <defs>
+    <marker id="ar4" markerWidth="10" markerHeight="10" refX="6.5" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9ca3af"/>
+    </marker>
+    <marker id="ar4b" markerWidth="10" markerHeight="10" refX="6.5" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#0d9488"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="878" height="468" rx="18" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="40" y="46" font-size="22" font-weight="700" fill="#1f2933">一次编译，处处运行 · 软链接分发与回写</text>
+  <text x="40" y="72" font-size="14" fill="#6b7280">skills/ 是唯一事实源，分发一律用软链接——严禁手工拷贝（拷贝必漂移）</text>
+
+  <!-- source -->
+  <rect x="40" y="150" width="180" height="120" rx="16" fill="#4f46e5"/>
+  <text x="130" y="196" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">skills/</text>
+  <text x="130" y="222" text-anchor="middle" font-size="13" fill="#e0e7ff">唯一事实源</text>
+  <text x="130" y="244" text-anchor="middle" font-size="12" fill="#c7d2fe">SKILL.md × 26</text>
+
+  <!-- install.sh hub -->
+  <rect x="300" y="168" width="150" height="84" rx="14" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="375" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">./install.sh</text>
+  <text x="375" y="222" text-anchor="middle" font-size="12" fill="#92400e">软链接分发</text>
+  <text x="375" y="240" text-anchor="middle" font-size="12" fill="#92400e">（幂等可重跑）</text>
+
+  <line x1="222" y1="210" x2="296" y2="210" stroke="#9ca3af" stroke-width="2" marker-end="url(#ar4)"/>
+
+  <!-- fan-out targets -->
+  <!-- target 1 -->
+  <line x1="452" y1="190" x2="524" y2="140" stroke="#9ca3af" stroke-width="2" marker-end="url(#ar4)"/>
+  <rect x="530" y="110" width="310" height="58" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="548" y="134" font-size="13" font-weight="700" fill="#1f2933">~/.claude/skills/</text>
+  <text x="548" y="155" font-size="12" fill="#6b7280">Claude Code 全局挂载</text>
+
+  <!-- target 2 -->
+  <line x1="452" y1="210" x2="524" y2="210" stroke="#9ca3af" stroke-width="2" marker-end="url(#ar4)"/>
+  <rect x="530" y="182" width="310" height="58" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="548" y="206" font-size="13" font-weight="700" fill="#1f2933">~/.agents/skills/</text>
+  <text x="548" y="227" font-size="12" fill="#6b7280">Codex · Cursor · Gemini CLI 原生读取</text>
+
+  <!-- target 3 -->
+  <line x1="452" y1="230" x2="524" y2="280" stroke="#9ca3af" stroke-width="2" marker-end="url(#ar4)"/>
+  <rect x="530" y="254" width="310" height="58" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="548" y="278" font-size="13" font-weight="700" fill="#1f2933">.claude/skills · .agents/skills</text>
+  <text x="548" y="299" font-size="12" fill="#6b7280">项目级挂载（含流水线技能）</text>
+
+  <!-- target 4: AGENTS.md -->
+  <line x1="375" y1="252" x2="375" y2="300" stroke="#9ca3af" stroke-width="2" marker-end="url(#ar4)"/>
+  <rect x="300" y="304" width="150" height="52" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="375" y="328" text-anchor="middle" font-size="13" font-weight="700" fill="#374151">AGENTS.md</text>
+  <text x="375" y="346" text-anchor="middle" font-size="11.5" fill="#6b7280">生成的技能索引</text>
+
+  <!-- feedback loop -->
+  <rect x="40" y="360" width="800" height="86" rx="14" fill="#f0fdfa" stroke="#5eead4"/>
+  <text x="60" y="388" font-size="14" font-weight="700" fill="#0f766e">反馈回路 · 实战修正直接落回事实源</text>
+  <text x="60" y="412" font-size="12.5" fill="#134e4a">在任意 Agent、任意项目里让它把经验追加到技能的 Field Notes 章节——因为挂载点是软链接，</text>
+  <text x="60" y="432" font-size="12.5" fill="#134e4a">编辑挂载路径下的 SKILL.md，改动直接写回本仓库 skills/。无需同步，天然一致。</text>
+  <text x="250" y="352" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f766e">软链接直达，改动写回 →</text>
+  <path d="M245 356 C200 336 150 320 130 274" fill="none" stroke="#0d9488" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar4b)"/>
+</svg>

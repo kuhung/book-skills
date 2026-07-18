@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">核心原理：把读书笔记编译成 AI 外挂</title>
+  <desc id="desc">微信读书划线经 book-to-skill 五步流水线编译成 SKILL.md 技能，在任意 AI Agent 对话中自动调用。</desc>
+  <defs>
+    <marker id="ar1" markerWidth="10" markerHeight="10" refX="6.5" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="878" height="378" rx="18" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="40" y="46" font-size="22" font-weight="700" fill="#1f2933">核心原理 · 把读书笔记「编译」成 AI 外挂</text>
+  <text x="40" y="72" font-size="14" fill="#6b7280">像源码经编译器变成可执行文件——你的划线，经流水线变成 AI 能直接运行的方法论</text>
+
+  <!-- arrows -->
+  <line x1="218" y1="185" x2="244" y2="185" stroke="#9ca3af" stroke-width="2" marker-end="url(#ar1)"/>
+  <line x1="426" y1="185" x2="452" y2="185" stroke="#9ca3af" stroke-width="2" marker-end="url(#ar1)"/>
+  <line x1="634" y1="185" x2="660" y2="185" stroke="#9ca3af" stroke-width="2" marker-end="url(#ar1)"/>
+
+  <!-- box 1 -->
+  <g>
+    <rect x="40" y="110" width="175" height="150" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="40" y="110" width="5" height="150" rx="2.5" fill="#9ca3af"/>
+    <text x="60" y="136" font-size="11" font-weight="700" letter-spacing="1.5" fill="#9ca3af">源码 · SOURCE</text>
+    <text x="60" y="160" font-size="17" font-weight="700" fill="#1f2933">沉睡的划线</text>
+    <text x="60" y="188" font-size="12.5" fill="#6b7280">微信读书里几百条</text>
+    <text x="60" y="208" font-size="12.5" fill="#6b7280">划线与想法</text>
+    <text x="60" y="234" font-size="12.5" fill="#9ca3af">读过，用时却调不出</text>
+  </g>
+
+  <!-- box 2 -->
+  <g>
+    <rect x="248" y="110" width="175" height="150" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="248" y="110" width="5" height="150" rx="2.5" fill="#4f46e5"/>
+    <text x="268" y="136" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4f46e5">编译器 · COMPILE</text>
+    <text x="268" y="160" font-size="17" font-weight="700" fill="#1f2933">book-to-skill</text>
+    <text x="268" y="188" font-size="12.5" fill="#6b7280">五步流水线自动转化</text>
+    <text x="268" y="208" font-size="12.5" fill="#6b7280">私有存档 → 结构化</text>
+    <text x="268" y="234" font-size="12.5" fill="#6b7280">→ 提取方法论框架</text>
+  </g>
+
+  <!-- box 3 -->
+  <g>
+    <rect x="456" y="110" width="175" height="150" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="456" y="110" width="5" height="150" rx="2.5" fill="#0d9488"/>
+    <text x="476" y="136" font-size="11" font-weight="700" letter-spacing="1.5" fill="#0d9488">可执行 · BINARY</text>
+    <text x="476" y="160" font-size="17" font-weight="700" fill="#1f2933">SKILL.md</text>
+    <text x="476" y="188" font-size="12.5" fill="#6b7280">可执行的方法论指令</text>
+    <text x="476" y="208" font-size="12.5" fill="#6b7280">含自动触发的</text>
+    <text x="476" y="234" font-size="12.5" fill="#6b7280">description 路由键</text>
+  </g>
+
+  <!-- box 4 -->
+  <g>
+    <rect x="664" y="110" width="175" height="150" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="664" y="110" width="5" height="150" rx="2.5" fill="#d97706"/>
+    <text x="684" y="136" font-size="11" font-weight="700" letter-spacing="1.5" fill="#d97706">运行时 · RUNTIME</text>
+    <text x="684" y="160" font-size="17" font-weight="700" fill="#1f2933">AI 自动调用</text>
+    <text x="684" y="188" font-size="12.5" fill="#6b7280">对话匹配即加载</text>
+    <text x="684" y="208" font-size="12.5" fill="#6b7280">用那本书的方法</text>
+    <text x="684" y="234" font-size="12.5" fill="#6b7280">指导你当下的事</text>
+  </g>
+
+  <text x="440" y="312" text-anchor="middle" font-size="17" font-weight="700" fill="#1f2933">给你的 AI 装一副外挂，读过的书在你需要时自己开口</text>
+  <text x="440" y="338" text-anchor="middle" font-size="13" fill="#6b7280">一次挂载，Claude Code / Cursor / Codex / Gemini CLI 四家通用</text>
+</svg>

@@ -10,6 +10,10 @@ License: MIT | 跨 Agent 通用 Skill
 
 本仓库做的事：把微信读书里的划线与想法，编译成 `SKILL.md` 技能指令，一次挂载，Claude Code / Cursor / Codex / Gemini CLI 四家通用。当你的对话匹配某个技能的触发条件时，AI 自动加载那本书的方法论来指导你。
 
+它给你的 AI 装上一副外挂：你读过的书，在你需要时自己开口。
+
+![把读书笔记编译成 AI 外挂：沉睡的划线经 book-to-skill 五步流水线编译成 SKILL.md，在对话中被任意 AI Agent 自动调用](assets/diagrams/1-concept-compiler.svg)
+
 ---
 
 ## 看效果
@@ -30,6 +34,10 @@ AI 给出对话脚本:
 ```
 
 差距：**没技能时给的是模板，有技能时给的是基于《高绩效教练》GROW 模型的专业教练式对话策略。** AI 知道"建议交换责任"所以不急着给答案，知道"为什么"改为"是什么原因"更安全，知道先让对方自评再补充观察。
+
+AI 怎么知道该用哪本书？你不用手动指定——正常提问，Agent 用每个技能 `description` 里的触发场景做路由匹配，命中后按需分层加载，绝不挤占上下文：
+
+![使用方法：你正常对话，Agent 用 description 路由键匹配触发场景，命中后加载 SKILL.md 正文；渐进式披露分 L0 description、L1 SKILL.md 正文、L2 notes 深层论据三层按需加载](assets/diagrams/6-runtime-routing.svg)
 
 ---
 
@@ -95,7 +103,11 @@ AI 给出对话脚本:
 
 每个技能都有完整的理论笔记（`notes/`）和可执行指令（`skills/`），书名即可点进查看。
 
-> **为什么是这 26 本？** 微信读书里有划线的书 130+ 本，但只有"含可复用、可执行方法论"的书才编译得成技能——GROW、SPIN、飞轮、DevOps 三步法这类"照着做"的框架。叙事/历史/传记/科普/备考类划线再精彩，也压不成一套动作，故不收。选书卡的是**方法论密度，不是划线数量**。
+**为什么 130+ 本只成了 26 个技能？** 决定一本书能不能成技能的，是它有没有一套能照着做的方法，跟你划了多少条线关系不大。
+
+![数据漏斗：藏书 356 本 → 有个人划线 131 本 → 方法论候选约 24 本 → 已成技能 26 个，决定能否成技能的是方法论密度，跟划线数量关系不大](assets/diagrams/5-funnel.svg)
+
+这 131 本都过了硬门槛——只要在微信读书里划过线就算，哪怕一条想法都没写。往下再筛的是**方法论密度**：GROW、SPIN、飞轮、DevOps 三步法这类能照着做的框架，才编译得成技能。叙事、历史、传记、科普、备考这些，划线再精彩也压不成一套动作，我把它们留在了外面，跟数据够不够无关。
 
 ---
 
@@ -125,13 +137,7 @@ cd book-skills
 
 ## 五步流水线
 
-```mermaid
-flowchart LR
-    A[私有存档] --> B[结构化重组]
-    B --> C[提取 Skill]
-    C --> D[README 映射]
-    D --> E[多 Agent 分发]
-```
+![五步流水线：微信读书 API 的个人划线与社区热门划线，经私有存档、结构化重组、提取技能、README 映射、多 Agent 分发，private 目录被 gitignore 隔离](assets/diagrams/2-pipeline.svg)
 
 | 步骤 | 做什么 | 产出 |
 |------|--------|------|
@@ -141,13 +147,17 @@ flowchart LR
 | Step 4 | 更新 README 技能注册表 | README.md 新增条目 |
 | Step 5 | `install.sh` 软链接到四家 Agent | 全局可用 |
 
-核心设计：**残差思维**——社区热门划线是共识基线，你的个人划线是独特补充，两者合并才是"你对这本书的完整理解"。
+核心设计是**残差思维**——社区热门划线是共识基线，你的个人划线是独特补充，两者合并才是"你对这本书的完整理解"。
+
+![残差思维：社区共识（基线）加上你的个人划线与想法（残差），等于你对这本书的完整理解；个人补充只作呈现不作评判，实战修正回写 Field Notes 是第二次残差](assets/diagrams/3-residual-philosophy.svg)
 
 详细 SOP 见 [skills/book-to-skill/SKILL.md](skills/book-to-skill/SKILL.md)。
 
 ---
 
 ## 一次编译，处处运行
+
+![一次编译处处运行：skills 目录是唯一事实源，install.sh 用软链接分发到 Claude Code、Codex、Cursor、Gemini CLI 及项目级挂载点并生成 AGENTS.md，实战修正经软链接直接写回事实源](assets/diagrams/4-distribution.svg)
 
 `skills/` 目录是唯一事实源。`install.sh` 把每个技能软链接到四家 Agent 的标准读取路径：
 
@@ -158,7 +168,7 @@ flowchart LR
 | 本仓库项目级 | `.agents/skills`、`.claude/skills` | 指向 `skills/` |
 | AGENTS.md | 根目录 | 生成的技能索引 |
 
-严禁手工拷贝——拷贝必漂移。反馈回路也走软链接：技能在实战中被修正时，无论你身处哪个项目、用哪家 Agent，让它追加到 Field Notes 章节，改动直接落回本仓库。
+不要手工拷贝——拷出来的副本迟早跟源头对不上。反馈回路也走软链接：技能在实战中被修正时，无论你身处哪个项目、用哪家 Agent，让它追加到 Field Notes 章节，改动直接落回本仓库。
 
 ---
 
@@ -196,13 +206,13 @@ book-skills/
 
 - `private/` 已 gitignore，原始划线绝不进公开仓库
 - API Key 不入仓库
-- `notes/` 是脱敏后的结构化重组，不是原书照搬
+- `notes/` 是脱敏后的结构化重组，只保留提炼过的结构，不搬运原书正文
 
 ---
 
 ## License
 
-MIT — 随便用。
+构建方法：MIT
 
 ---
 

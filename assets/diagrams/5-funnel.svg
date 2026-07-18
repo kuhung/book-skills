@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">选书数据漏斗</title>
+  <desc id="desc">从藏书 356 本到 26 个技能的漏斗，真正的筛子是方法论密度，跟划线数量关系不大。</desc>
+  <rect x="1" y="1" width="778" height="458" rx="18" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="40" y="46" font-size="22" font-weight="700" fill="#1f2933">数据漏斗 · 为什么 130+ 本只成了 26 个技能</text>
+  <text x="40" y="72" font-size="14" fill="#6b7280">决定能否成技能的，是这本书有没有一套能照着做的方法，跟划线多少关系不大</text>
+
+  <!-- funnel tiers (trapezoids) -->
+  <!-- tier 1 -->
+  <path d="M100 106 L540 106 L500 158 L140 158 Z" fill="#c7d2fe" stroke="#a5b4fc"/>
+  <text x="320" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3730a3">微信读书藏书</text>
+  <text x="320" y="151" text-anchor="middle" font-size="13" fill="#4338ca">356 本</text>
+
+  <!-- filter 1 -->
+  <text x="560" y="140" font-size="12.5" fill="#9ca3af">— 划过线或写过想法即可（硬门槛）</text>
+
+  <!-- tier 2 -->
+  <path d="M150 172 L490 172 L456 224 L184 224 Z" fill="#a5b4fc" stroke="#818cf8"/>
+  <text x="320" y="198" text-anchor="middle" font-size="15" font-weight="700" fill="#312e81">有个人划线的书</text>
+  <text x="320" y="217" text-anchor="middle" font-size="13" fill="#3730a3">131 本</text>
+
+  <!-- filter 2 -->
+  <text x="560" y="206" font-size="12.5" fill="#d97706">— ★ 方法论密度筛选（可复用框架）</text>
+
+  <!-- tier 3 -->
+  <path d="M194 238 L446 238 L414 290 L226 290 Z" fill="#818cf8" stroke="#6366f1"/>
+  <text x="320" y="264" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">方法论候选</text>
+  <text x="320" y="283" text-anchor="middle" font-size="13" fill="#e0e7ff">约 24 本</text>
+
+  <!-- filter 3 -->
+  <text x="560" y="272" font-size="12.5" fill="#9ca3af">— 两书合一 · 部分喂入已有技能</text>
+
+  <!-- tier 4 -->
+  <path d="M236 304 L404 304 L380 356 L260 356 Z" fill="#4f46e5" stroke="#4338ca"/>
+  <text x="320" y="330" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">已成技能</text>
+  <text x="320" y="349" text-anchor="middle" font-size="12.5" fill="#e0e7ff">26 个（覆盖约 31 本）</text>
+
+  <!-- key insight -->
+  <rect x="40" y="384" width="700" height="56" rx="12" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="60" y="408" font-size="13.5" font-weight="700" fill="#c2410c">结论：131 → 26 这道收窄，是我刻意设的一道质量闸门</text>
+  <text x="60" y="428" font-size="12.5" fill="#9a3412">叙事 / 历史 / 传记 / 科普 / 备考类划线再精彩，也压不成一套动作，我把它们留在了外面</text>
+</svg>
