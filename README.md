@@ -29,6 +29,26 @@ We are injecting top-tier human strategy directly into your AI workflow.
   - Stop guessing. Start building systematic, backtested trading models.
   - Note: [notes/动量策略_笔记.md](notes/动量策略_笔记.md)
   - Skill: [skills/momentum-strategy/SKILL.md](skills/momentum-strategy/SKILL.md)
+- **Build (Tony Fadell)**
+  - Stop polishing ideas in your head. Start making the intangible tangible.
+  - Note: [notes/创造_笔记.md](notes/创造_笔记.md)
+  - Skill: [skills/product-creation/SKILL.md](skills/product-creation/SKILL.md)
+- **Agentic Design Patterns (Antonio Gulli)**
+  - Stop asking if agents can. Start asking what each pattern costs.
+  - Note: [notes/智能体设计模式_笔记.md](notes/智能体设计模式_笔记.md)
+  - Skill: [skills/agent-design-patterns/SKILL.md](skills/agent-design-patterns/SKILL.md)
+- **Solo (单干)**
+  - Stop selling knowledge. Start selling outcomes with leverage.
+  - Note: [notes/单干_笔记.md](notes/单干_笔记.md)
+  - Skill: [skills/solo-operator/SKILL.md](skills/solo-operator/SKILL.md)
+- **Coaching for Performance (高绩效教练)**
+  - Stop trading advice for responsibility. Start asking questions that build awareness.
+  - Note: [notes/高绩效教练_笔记.md](notes/高绩效教练_笔记.md)
+  - Skill: [skills/coaching-grow/SKILL.md](skills/coaching-grow/SKILL.md)
+- **The Key Leap for New Managers (关键跨越·新手篇)**
+  - Stop being the team's best player. Start raising the whole team's game.
+  - Note: [notes/关键跨越新手篇_笔记.md](notes/关键跨越新手篇_笔记.md)
+  - Skill: [skills/first-time-manager/SKILL.md](skills/first-time-manager/SKILL.md)
 
 ### How to Add a New Book
 
@@ -106,6 +126,26 @@ We are not building a knowledge base, we are writing "drivers" for your external
   - 拒绝拍脑袋交易，用系统回测和风险量化构建可靠的量化策略。
   - 理论笔记: [notes/动量策略_笔记.md](notes/动量策略_笔记.md)
   - 可执行技能: [skills/momentum-strategy/SKILL.md](skills/momentum-strategy/SKILL.md)
+- **《创造》(Build)**
+  - 拒绝停留在脑海里打磨想法，用新闻稿和触点图把无形变有形。
+  - 理论笔记: [notes/创造_笔记.md](notes/创造_笔记.md)
+  - 可执行技能: [skills/product-creation/SKILL.md](skills/product-creation/SKILL.md)
+- **《智能体设计模式》(Agentic Design Patterns)**
+  - 拒绝为用 Agent 而用 Agent，先看每个模式的代价再选型。
+  - 理论笔记: [notes/智能体设计模式_笔记.md](notes/智能体设计模式_笔记.md)
+  - 可执行技能: [skills/agent-design-patterns/SKILL.md](skills/agent-design-patterns/SKILL.md)
+- **《单干》(Solo)**
+  - 拒绝直接出售知识，用杠杆撬动稀缺、瞄准效果定价。
+  - 理论笔记: [notes/单干_笔记.md](notes/单干_笔记.md)
+  - 可执行技能: [skills/solo-operator/SKILL.md](skills/solo-operator/SKILL.md)
+- **《高绩效教练》(Coaching for Performance)**
+  - 拒绝用建议交换责任，用 GROW 提问创建觉察与担当。
+  - 理论笔记: [notes/高绩效教练_笔记.md](notes/高绩效教练_笔记.md)
+  - 可执行技能: [skills/coaching-grow/SKILL.md](skills/coaching-grow/SKILL.md)
+- **《关键跨越（新手篇）》(The Key Leap)**
+  - 拒绝继续做团队里最强的个人，转型为提升团队整体效能的主管。
+  - 理论笔记: [notes/关键跨越新手篇_笔记.md](notes/关键跨越新手篇_笔记.md)
+  - 可执行技能: [skills/first-time-manager/SKILL.md](skills/first-time-manager/SKILL.md)
 
 ### 如何添加一本新书
 
